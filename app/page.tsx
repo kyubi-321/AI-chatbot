@@ -1,5 +1,5 @@
 "use client"
-import React from "react"
+import React, { useEffect, useRef } from "react"
 import { useChat } from "ai/react"
 import Textarea from "react-textarea-autosize"
 
@@ -9,6 +9,16 @@ export default function Home() {
     api: "/api",
         
   })
+
+  const messageEndRef = useRef<HTMLInputElement>(null);
+
+  const scrollToBottom = () => {
+    messageEndRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
+  useEffect(() => {
+    scrollToBottom();
+  }, [messages]);
 
   return (
     <div className="min-h-screen bg-neutral-800">
@@ -65,6 +75,8 @@ export default function Home() {
           </div>
         )
       }
+
+      <div ref={messageEndRef}></div>
 
       <form onSubmit={handleSubmit} className="fixed bottom-0 w-[75%] mx-auto p-5 left-0 right-0 bg-neutral-800">
 
