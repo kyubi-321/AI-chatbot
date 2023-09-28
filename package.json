@@ -1,0 +1,33 @@
+{
+  "name": "ai-chatbot",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@prisma/client": "^5.3.1",
+    "ai": "^2.2.13",
+    "mongodb": "^6.1.0",
+    "next": "latest",
+    "openai-edge": "^1.2.2",
+    "react": "latest",
+    "react-dom": "latest",
+    "react-textarea-autosize": "^8.5.3"
+  },
+  "devDependencies": {
+    "@types/node": "latest",
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "autoprefixer": "latest",
+    "eslint": "latest",
+    "eslint-config-next": "latest",
+    "postcss": "latest",
+    "prisma": "^5.3.1",
+    "tailwindcss": "latest",
+    "typescript": "latest"
+  }
+}
