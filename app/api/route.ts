@@ -22,7 +22,7 @@ export async function POST(req: Request){
 
     })
 
-    console.log(messages)
+    
 
     const stream = OpenAIStream(response,{
         onCompletion : async (completion : string)=>{
